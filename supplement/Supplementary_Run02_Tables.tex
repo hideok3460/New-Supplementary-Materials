@@ -1,0 +1,306 @@
+\documentclass[10pt,a4paper]{article}
+\usepackage[margin=21mm,headheight=15pt]{geometry}
+\usepackage[T1]{fontenc}\usepackage{lmodern,amsmath,amssymb,braket,booktabs,tabularx,array,longtable,graphicx,xurl,fancyhdr}
+\usepackage[colorlinks=true,linkcolor=blue,urlcolor=blue]{hyperref}
+\pagestyle{fancy}\fancyhf{}\fancyhead[L]{\small Applied Sciences \textbar\ applsci-4605095}\fancyhead[R]{\small SUPPLEMENT}\fancyfoot[C]{\thepage}
+\setlength{\parindent}{0pt}\setlength{\parskip}{5pt}
+\newcommand{\Tr}{\operatorname{Tr}}\newcommand{\CX}{\mathrm{CX}}\newcommand{\Ccode}{\mathcal C}
+\renewcommand{\thesection}{S\arabic{section}}
+\renewcommand{\theequation}{S\arabic{equation}}
+\renewcommand{\thetable}{S\arabic{table}}
+\newcolumntype{Y}{>{\raggedright\arraybackslash}X}
+\begin{document}
+\begin{center}
+{\LARGE\bfseries Supplementary Run02 Tables}\par\vspace{6pt}
+{\normalsize Exact Logical-Channel Equivalence and Code-Space-Leakage-Aware Tomography of a Five-Qubit Encoded-Qubit Transfer Circuit}\par\vspace{4pt}
+Ami Ukai, Syunsuke Fujiwara, Takahiko Mori and Hideaki Okazaki\par
+Manuscript applsci-4605095 --- revised 26 October 2026
+\end{center}
+
+These tables are generated from the completed, preserved run02 analyses supplied with the manuscript. All intervals are pointwise 95\% multinomial counting-bootstrap intervals from 500 resamples, not systematic, calibration, drift or guaranteed boundary-coverage intervals. No new QPU job or full bootstrap optimization was performed for this manuscript audit. Numbers below are rounded for display; the CSV files retain precision.
+\section{Acquisition, provenance and independent audit}
+The single full-family acquisition on \texttt{ibm\_phoenix} contains 1746 circuits at 4096 shots each (7,151,616 shots): 1440 network, 90 reference-circuit, 192 discarded-system diagnostic, and 24 readout-calibration circuits. The six jobs below are chunks of one acquisition, not six independent repeated experiments. Recorded execution times are on 24 October 2026 (UTC).
+\par\begin{table}[htbp]\centering\small
+\caption{Archived IBM job identifiers and execution windows.}\label{stab:jobs}
+\begin{tabular}{lrrr}\toprule
+Job ID & Circuits & Running & Finished\\\midrule
+\texttt{dbeaj2npc3tc739lbri0} & 300 & 19:40:33 & 19:42:12 \\
+\texttt{dbeaj3nsstms73fbnr60} & 300 & 19:40:34 & 19:42:19 \\
+\texttt{dbeaj4fpc3tc739lbrl0} & 300 & 19:40:34 & 19:42:27 \\
+\texttt{dbeaj57sstms73fbnr9g} & 300 & 19:40:35 & 19:42:33 \\
+\texttt{dbeaj5om94ac738rftb0} & 300 & 19:40:35 & 19:42:38 \\
+\texttt{dbeaj6fgdj9s73flerog} & 246 & 19:40:35 & 19:42:09 \\
+\bottomrule\end{tabular}\end{table}\par
+
+The archive records Python 3.12.15, NumPy 2.5.4, SciPy 1.18.1, Qiskit 2.6.1, IBM Runtime 0.51.0, CVXPY 1.9.3 and SCS 3.3.1. These are recorded acquisition/analysis versions, not newly installed versions. Initial layout: $(61,60,70,80,71)$. Network receiver order $(q_{3'},q_{4'})$ is $(60,71)$; tensor and measured-bit order is $q_{4'}q_{3'}$. The two references finish on different physical pairs, as specified in S7.
+
+The normalized receiver-count file has SHA-256
+\begin{quote}\small\nolinkurl{99ce131823c6bc7b1cf50599adc079fbcf708cc7f46f44b07b7c88b6c646b188}\end{quote}
+The supplied audit verifies 1746 raw-count records against the manifest and 3373 file hashes in the preserved archive. It rederives all 50 listed state estimates from counts, checks all 34 process metrics/objectives using saved Choi matrices, recomputes percentile intervals from stored 500-resample arrays, and recomputes all 34 GOF $p$-values. Largest discrepancies are $4.45\times10^{-16}$ for state matrices, $5.74\times10^{-9}$ for scalar state metrics (concurrence eigensolver rounding), $2.23\times10^{-16}$ for process metrics and $4.45\times10^{-16}$ for interval endpoints. These checks establish internal reproducibility of saved records, not independent IBM-side authentication or frequentist coverage.
+
+The core code uses $y=0$. Resource/control labels are written $(M_1,M_2;x,m)$. The current full acquisition replaces the previous two-resource experiment as the primary quantitative evidence. It is not pooled with that pilot as a replicated resource comparison.
+\clearpage
+\section{Full-state phase, concurrence and code population}
+For raw states, phase is the branch-ordered element $c_{uv}=\langle u|\rho|v\rangle$, where
+$u=(y\oplus z,\kappa)$, $v=(\bar y\oplus z,1\oplus\kappa)$,
+$z=m\oplus x$ and $\kappa=m\oplus M_1\oplus M_2$. Its ideal phase is $-\pi/3$ for $M_2=0$ and $2\pi/3$ for $M_2=1$. The evaluated raw code is $y_{\rm raw}=x\oplus M_1\oplus M_2$; physical and tracked states are evaluated on $\Ccode_0$. Switching from branch order to the fixed code basis conjugates the raw coherence when $\kappa=1$.
+\par\begin{table}[htbp]\centering\small
+\caption{Raw receiver states. Each bracket is a 95\% counting interval; $C_{\rm ent}$ uses the full trace-one two-qubit matrix.}\label{stab:state_raw}
+\begin{tabular}{llll}\toprule
+$(M_1,M_2;x,m)$ & Phase (rad) & $C_{\rm ent}$ & Code population\\\midrule
+$(0,0;0,0)$ & -0.8247 [-0.8452, -0.8060] & 0.8057 [0.7876, 0.8257] & 0.9592 [0.9539, 0.9646] \\
+$(0,0;0,1)$ & -0.8968 [-0.9194, -0.8750] & 0.7898 [0.7727, 0.8115] & 0.9541 [0.9475, 0.9601] \\
+$(0,0;1,0)$ & -0.8977 [-0.9189, -0.8744] & 0.7778 [0.7593, 0.7987] & 0.9529 [0.9468, 0.9597] \\
+$(0,0;1,1)$ & -0.8152 [-0.8343, -0.7948] & 0.8006 [0.7789, 0.8175] & 0.9590 [0.9529, 0.9651] \\
+$(0,1;0,0)$ & 2.2932 [2.2693, 2.3118] & 0.7831 [0.7665, 0.8022] & 0.9546 [0.9481, 0.9611] \\
+$(0,1;0,1)$ & 2.2374 [2.2142, 2.2598] & 0.7572 [0.7390, 0.7787] & 0.9436 [0.9364, 0.9506] \\
+$(0,1;1,0)$ & 2.2154 [2.1901, 2.2368] & 0.7765 [0.7583, 0.7964] & 0.9529 [0.9465, 0.9589] \\
+$(0,1;1,1)$ & 2.3164 [2.2940, 2.3367] & 0.7797 [0.7627, 0.7993] & 0.9556 [0.9485, 0.9612] \\
+$(1,0;0,0)$ & -0.8244 [-0.8473, -0.8029] & 0.7933 [0.7773, 0.8121] & 0.9597 [0.9535, 0.9651] \\
+$(1,0;0,1)$ & -0.8750 [-0.8946, -0.8548] & 0.8273 [0.8098, 0.8443] & 0.9590 [0.9526, 0.9644] \\
+$(1,0;1,0)$ & -0.9243 [-0.9460, -0.9063] & 0.7925 [0.7744, 0.8092] & 0.9553 [0.9485, 0.9619] \\
+$(1,0;1,1)$ & -0.8123 [-0.8324, -0.7947] & 0.8157 [0.7996, 0.8354] & 0.9597 [0.9537, 0.9656] \\
+$(1,1;0,0)$ & 2.3157 [2.2910, 2.3395] & 0.7570 [0.7398, 0.7755] & 0.9492 [0.9426, 0.9548] \\
+$(1,1;0,1)$ & 2.2398 [2.2184, 2.2588] & 0.8009 [0.7829, 0.8209] & 0.9497 [0.9421, 0.9561] \\
+$(1,1;1,0)$ & 2.2610 [2.2388, 2.2802] & 0.7574 [0.7372, 0.7765] & 0.9475 [0.9404, 0.9546] \\
+$(1,1;1,1)$ & 2.3477 [2.3268, 2.3670] & 0.8074 [0.7888, 0.8255] & 0.9500 [0.9438, 0.9562] \\
+\bottomrule\end{tabular}\end{table}\par
+The known raw parity change is not counted as leakage. Phase values test the relative sign, unlike $|c|$ alone. The main article gives the 16 raw-code labels explicitly. All saved network phase-localization checks pass, but this is not a formal circular-interval coverage proof.\clearpage
+\par\begin{table}[htbp]\centering\small
+\caption{Physically recovered receiver states. Each bracket is a 95\% counting interval; $C_{\rm ent}$ uses the full trace-one two-qubit matrix.}\label{stab:state_physical}
+\begin{tabular}{llll}\toprule
+$(M_1,M_2;x,m)$ & Phase (rad) & $C_{\rm ent}$ & Code population\\\midrule
+$(0,0;0,0)$ & -0.8182 [-0.8395, -0.7961] & 0.7707 [0.7543, 0.7899] & 0.9592 [0.9537, 0.9656] \\
+$(0,0;0,1)$ & -0.9282 [-0.9486, -0.9069] & 0.7916 [0.7717, 0.8072] & 0.9556 [0.9497, 0.9615] \\
+$(0,0;1,0)$ & -0.8904 [-0.9119, -0.8702] & 0.7869 [0.7673, 0.8031] & 0.9495 [0.9420, 0.9559] \\
+$(0,0;1,1)$ & -0.8273 [-0.8495, -0.8046] & 0.7729 [0.7533, 0.7916] & 0.9519 [0.9465, 0.9587] \\
+$(0,1;0,0)$ & -0.8343 [-0.8568, -0.8139] & 0.7954 [0.7773, 0.8164] & 0.9548 [0.9484, 0.9611] \\
+$(0,1;0,1)$ & -0.8922 [-0.9157, -0.8698] & 0.7861 [0.7664, 0.8047] & 0.9570 [0.9510, 0.9629] \\
+$(0,1;1,0)$ & -0.9400 [-0.9596, -0.9176] & 0.7853 [0.7672, 0.8024] & 0.9502 [0.9444, 0.9567] \\
+$(0,1;1,1)$ & -0.8206 [-0.8408, -0.7995] & 0.7947 [0.7744, 0.8118] & 0.9517 [0.9461, 0.9583] \\
+$(1,0;0,0)$ & -0.8191 [-0.8389, -0.7977] & 0.7852 [0.7683, 0.8045] & 0.9583 [0.9517, 0.9642] \\
+$(1,0;0,1)$ & -0.8933 [-0.9137, -0.8733] & 0.8225 [0.8041, 0.8427] & 0.9612 [0.9553, 0.9668] \\
+$(1,0;1,0)$ & -0.9372 [-0.9593, -0.9156] & 0.7974 [0.7797, 0.8150] & 0.9558 [0.9498, 0.9620] \\
+$(1,0;1,1)$ & -0.8046 [-0.8254, -0.7857] & 0.8055 [0.7875, 0.8248] & 0.9568 [0.9500, 0.9623] \\
+$(1,1;0,0)$ & -0.8299 [-0.8505, -0.8079] & 0.7872 [0.7689, 0.8035] & 0.9487 [0.9413, 0.9553] \\
+$(1,1;0,1)$ & -0.9058 [-0.9258, -0.8861] & 0.8129 [0.7949, 0.8296] & 0.9545 [0.9489, 0.9606] \\
+$(1,1;1,0)$ & -0.9279 [-0.9487, -0.9066] & 0.7741 [0.7568, 0.7941] & 0.9490 [0.9425, 0.9553] \\
+$(1,1;1,1)$ & -0.8189 [-0.8392, -0.7990] & 0.8050 [0.7864, 0.8241] & 0.9512 [0.9446, 0.9572] \\
+\bottomrule\end{tabular}\end{table}\par
+All 16 concurrence lower endpoints are positive under this estimator and bootstrap. Nevertheless, none of the physical phase intervals contains the ideal recovered value $-1.0472$ rad. The physical phase offsets are 0.1072--0.2426 rad. Entanglement survival is therefore not evidence of exact noisy-channel identity. The ideal concurrence for the chosen input is $2\sqrt{0.21}=0.9165$.\clearpage
+\par\begin{table}[htbp]\centering\small
+\caption{Classically frame-tracked states derived from the same raw counts. Each bracket is a 95\% counting interval; $C_{\rm ent}$ uses the full trace-one two-qubit matrix.}\label{stab:state_frame_tracked}
+\begin{tabular}{llll}\toprule
+$(M_1,M_2;x,m)$ & Phase (rad) & $C_{\rm ent}$ & Code population\\\midrule
+$(0,0;0,0)$ & -0.8247 [-0.8452, -0.8060] & 0.8057 [0.7876, 0.8257] & 0.9592 [0.9539, 0.9646] \\
+$(0,0;0,1)$ & -0.8968 [-0.9194, -0.8750] & 0.7898 [0.7727, 0.8115] & 0.9541 [0.9475, 0.9601] \\
+$(0,0;1,0)$ & -0.8977 [-0.9189, -0.8744] & 0.7778 [0.7593, 0.7987] & 0.9529 [0.9468, 0.9597] \\
+$(0,0;1,1)$ & -0.8152 [-0.8343, -0.7948] & 0.8006 [0.7789, 0.8175] & 0.9590 [0.9529, 0.9651] \\
+$(0,1;0,0)$ & -0.8484 [-0.8723, -0.8298] & 0.7831 [0.7665, 0.8022] & 0.9546 [0.9481, 0.9611] \\
+$(0,1;0,1)$ & -0.9042 [-0.9274, -0.8818] & 0.7572 [0.7390, 0.7787] & 0.9436 [0.9364, 0.9506] \\
+$(0,1;1,0)$ & -0.9262 [-0.9515, -0.9048] & 0.7765 [0.7583, 0.7964] & 0.9529 [0.9465, 0.9589] \\
+$(0,1;1,1)$ & -0.8252 [-0.8476, -0.8049] & 0.7797 [0.7627, 0.7993] & 0.9556 [0.9485, 0.9612] \\
+$(1,0;0,0)$ & -0.8244 [-0.8473, -0.8029] & 0.7933 [0.7773, 0.8121] & 0.9597 [0.9535, 0.9651] \\
+$(1,0;0,1)$ & -0.8750 [-0.8946, -0.8548] & 0.8273 [0.8098, 0.8443] & 0.9590 [0.9526, 0.9644] \\
+$(1,0;1,0)$ & -0.9243 [-0.9460, -0.9063] & 0.7925 [0.7744, 0.8092] & 0.9553 [0.9485, 0.9619] \\
+$(1,0;1,1)$ & -0.8123 [-0.8324, -0.7947] & 0.8157 [0.7996, 0.8354] & 0.9597 [0.9537, 0.9656] \\
+$(1,1;0,0)$ & -0.8259 [-0.8506, -0.8021] & 0.7570 [0.7398, 0.7755] & 0.9492 [0.9426, 0.9548] \\
+$(1,1;0,1)$ & -0.9018 [-0.9232, -0.8828] & 0.8009 [0.7829, 0.8209] & 0.9497 [0.9421, 0.9561] \\
+$(1,1;1,0)$ & -0.8806 [-0.9028, -0.8614] & 0.7574 [0.7372, 0.7765] & 0.9475 [0.9404, 0.9546] \\
+$(1,1;1,1)$ & -0.7939 [-0.8148, -0.7746] & 0.8074 [0.7888, 0.8255] & 0.9500 [0.9438, 0.9562] \\
+\bottomrule\end{tabular}\end{table}\par
+Tracking is a unitary re-expression of the raw tomogram and is not a third independent acquisition. Raw and tracked concurrence are identical up to numerical precision because the correction is local. Scalar differences between physical and tracked data include acquisition noise and compiler effects; they do not isolate a recovery-gate error rate.\par\begin{table}[htbp]\centering\small
+\caption{Reference-circuit state estimates with the same probe and reconstruction. Labels in the first column denote the protocol, not extra resource sectors.}\label{stab:state_baselines}
+\begin{tabular}{llll}\toprule
+Protocol & Phase (rad) & $C_{\rm ent}$ & Code population\\\midrule
+Direct & -0.9903 [-1.0097, -0.9692] & 0.8531 [0.8336, 0.8698] & 0.9900 [0.9834, 0.9916] \\
+SWAP & -0.9819 [-1.0026, -0.9631] & 0.8739 [0.8572, 0.8870] & 0.9807 [0.9750, 0.9848] \\
+\bottomrule\end{tabular}\end{table}\par
+\clearpage
+\section{Trace-aware logical-process metrics}
+$S_{\rm code}=\Tr J/2$ is mean survival and $D_{\rm id}^{\rm TNI}=\langle\Phi^+|J|\Phi^+\rangle/2$ is the survival-weighted identity overlap. Neither is a post-selected CPTP process fidelity. $Q=\sum_\nu\|\mathcal E_J(\sigma_\nu)-B_\nu\|_F^2$ uses four unnormalized code blocks. $f_{\rm bdry}$ is the fraction of 500 refits with minimum Choi eigenvalue below $10^{-6}$, an implementation diagnostic rather than a statistical coverage measure.
+\par\begin{table}[htbp]\centering\footnotesize
+\caption{Physical recovery. The last two columns show the block residual and boundary activity.}\label{stab:process_physical}
+\begin{tabular}{llllr}\toprule
+$(M_1,M_2;x,m)$ & $S_{\rm code}$ [95\% interval] & $D_{\rm id}^{\rm TNI}$ [95\% interval] & $Q$ & $f_{\rm bdry}$\\\midrule
+$(0,0;0,0)$ & 0.9502 [0.9466, 0.9559] & 0.9156 [0.9086, 0.9217] & $1.06\times10^{-5}$ & 0.940 \\
+$(0,0;0,1)$ & 0.9544 [0.9497, 0.9610] & 0.9294 [0.9231, 0.9351] & $4.81\times10^{-5}$ & 0.972 \\
+$(0,0;1,0)$ & 0.9508 [0.9475, 0.9575] & 0.9283 [0.9214, 0.9335] & $<10^{-12}$ & 0.856 \\
+$(0,0;1,1)$ & 0.9485 [0.9441, 0.9546] & 0.9194 [0.9130, 0.9246] & $1.36\times10^{-4}$ & 0.988 \\
+$(0,1;0,0)$ & 0.9538 [0.9493, 0.9589] & 0.9152 [0.9081, 0.9201] & $1.31\times10^{-5}$ & 0.888 \\
+$(0,1;0,1)$ & 0.9402 [0.9356, 0.9463] & 0.9134 [0.9062, 0.9182] & $1.07\times10^{-4}$ & 0.978 \\
+$(0,1;1,0)$ & 0.9415 [0.9392, 0.9489] & 0.9235 [0.9166, 0.9279] & $1.56\times10^{-6}$ & 0.968 \\
+$(0,1;1,1)$ & 0.9445 [0.9394, 0.9503] & 0.9079 [0.9010, 0.9135] & $7.51\times10^{-5}$ & 0.980 \\
+$(1,0;0,0)$ & 0.9516 [0.9483, 0.9585] & 0.9170 [0.9102, 0.9225] & $6.53\times10^{-7}$ & 0.934 \\
+$(1,0;0,1)$ & 0.9515 [0.9479, 0.9587] & 0.9263 [0.9199, 0.9313] & $1.05\times10^{-5}$ & 0.980 \\
+$(1,0;1,0)$ & 0.9553 [0.9516, 0.9614] & 0.9305 [0.9238, 0.9367] & $1.79\times10^{-4}$ & 1.000 \\
+$(1,0;1,1)$ & 0.9562 [0.9514, 0.9620] & 0.9172 [0.9111, 0.9225] & $9.42\times10^{-6}$ & 0.898 \\
+$(1,1;0,0)$ & 0.9452 [0.9404, 0.9523] & 0.9122 [0.9053, 0.9168] & $6.93\times10^{-5}$ & 0.982 \\
+$(1,1;0,1)$ & 0.9397 [0.9363, 0.9479] & 0.9162 [0.9100, 0.9217] & $3.49\times10^{-7}$ & 0.868 \\
+$(1,1;1,0)$ & 0.9438 [0.9395, 0.9495] & 0.9142 [0.9068, 0.9197] & $6.32\times10^{-5}$ & 0.966 \\
+$(1,1;1,1)$ & 0.9467 [0.9419, 0.9525] & 0.9105 [0.9041, 0.9161] & $3.52\times10^{-4}$ & 1.000 \\
+\bottomrule\end{tabular}\end{table}\par
+Physical $S_{\rm code}$ ranges from 0.9397 to 0.9562 and $D_{\rm id}^{\rm TNI}$ from 0.9079 to 0.9305. The held-out complex probe is not used to fit these four-probe channels; its code-block squared error ranges from $1.71\times10^{-4}$ to $1.13\times10^{-3}$. Its full values are in \nolinkurl{measured_cptni_fits.csv}.\clearpage
+\par\begin{table}[htbp]\centering\footnotesize
+\caption{Software frame recovery from raw process data. The last two columns show the block residual and boundary activity.}\label{stab:process_frame_tracked}
+\begin{tabular}{llllr}\toprule
+$(M_1,M_2;x,m)$ & $S_{\rm code}$ [95\% interval] & $D_{\rm id}^{\rm TNI}$ [95\% interval] & $Q$ & $f_{\rm bdry}$\\\midrule
+$(0,0;0,0)$ & 0.9485 [0.9446, 0.9544] & 0.9108 [0.9037, 0.9168] & $3.74\times10^{-6}$ & 0.916 \\
+$(0,0;0,1)$ & 0.9494 [0.9462, 0.9564] & 0.9255 [0.9193, 0.9309] & $3.78\times10^{-6}$ & 0.966 \\
+$(0,0;1,0)$ & 0.9477 [0.9448, 0.9545] & 0.9253 [0.9190, 0.9302] & $1.46\times10^{-5}$ & 0.974 \\
+$(0,0;1,1)$ & 0.9496 [0.9459, 0.9562] & 0.9167 [0.9103, 0.9225] & $9.25\times10^{-6}$ & 0.938 \\
+$(0,1;0,0)$ & 0.9474 [0.9430, 0.9538] & 0.9162 [0.9097, 0.9210] & $4.54\times10^{-6}$ & 0.920 \\
+$(0,1;0,1)$ & 0.9403 [0.9367, 0.9473] & 0.9134 [0.9071, 0.9195] & $4.67\times10^{-6}$ & 0.940 \\
+$(0,1;1,0)$ & 0.9407 [0.9370, 0.9478] & 0.9149 [0.9082, 0.9207] & $<10^{-12}$ & 0.814 \\
+$(0,1;1,1)$ & 0.9461 [0.9421, 0.9530] & 0.9055 [0.8987, 0.9113] & $7.94\times10^{-6}$ & 0.916 \\
+$(1,0;0,0)$ & 0.9541 [0.9503, 0.9599] & 0.9167 [0.9101, 0.9224] & $1.94\times10^{-5}$ & 0.948 \\
+$(1,0;0,1)$ & 0.9580 [0.9536, 0.9642] & 0.9274 [0.9212, 0.9329] & $1.96\times10^{-5}$ & 0.930 \\
+$(1,0;1,0)$ & 0.9488 [0.9455, 0.9555] & 0.9246 [0.9178, 0.9300] & $1.22\times10^{-5}$ & 0.972 \\
+$(1,0;1,1)$ & 0.9542 [0.9515, 0.9601] & 0.9187 [0.9120, 0.9248] & $<10^{-12}$ & 0.824 \\
+$(1,1;0,0)$ & 0.9429 [0.9367, 0.9487] & 0.9024 [0.8961, 0.9073] & $2.96\times10^{-4}$ & 1.000 \\
+$(1,1;0,1)$ & 0.9450 [0.9415, 0.9521] & 0.9192 [0.9130, 0.9244] & $1.56\times10^{-5}$ & 0.954 \\
+$(1,1;1,0)$ & 0.9400 [0.9375, 0.9480] & 0.9171 [0.9112, 0.9224] & $7.16\times10^{-9}$ & 0.920 \\
+$(1,1;1,1)$ & 0.9430 [0.9379, 0.9491] & 0.9064 [0.9004, 0.9124] & $1.09\times10^{-4}$ & 0.994 \\
+\bottomrule\end{tabular}\end{table}\par
+\par\begin{table}[htbp]\centering\footnotesize
+\caption{Reference CP-TNI fits. The same saved reference is reused in every descriptive sector comparison.}\label{stab:process_refs}
+\begin{tabular}{llllr}\toprule
+Protocol & $S_{\rm code}$ [95\% interval] & $D_{\rm id}^{\rm TNI}$ [95\% interval] & $Q$ & $f_{\rm bdry}$\\\midrule
+Direct & 0.9872 [0.9829, 0.9911] & 0.9671 [0.9602, 0.9708] & $2.20\times10^{-4}$ & 1.000 \\
+SWAP & 0.9905 [0.9878, 0.9920] & 0.9764 [0.9702, 0.9777] & $3.24\times10^{-4}$ & 1.000 \\
+\bottomrule\end{tabular}\end{table}\par
+\clearpage
+\section{Residuals calibrated against shot noise}
+The fitted null is a completely positive trace-preserving map from one ideal logical input qubit to the full four-dimensional receiver. It is not the ideal transfer channel. The Pearson statistic uses all four-probe basis/outcome counts. Each parametric replicate is fitted again, and the original CP-TNI block objective is also recomputed. For either statistic $p=(1+N_{\rm exceed})/501$. $X^*_{.95}$ and $Q^*_{.95}$ are the saved 95th percentiles under that fitted null. No asymptotic degrees-of-freedom assumption or familywise correction is imposed; these are pointwise model checks.
+\par\begin{table}[htbp]\centering\footnotesize
+\caption{Physical-recovery fits. Numerical zeros below $10^{-12}$ are displayed as a bound, not as missing results.}\label{stab:gof_physical}
+\begin{tabular}{lrrrrrr}\toprule
+$(M_1,M_2;x,m)$ & $X^2$ & $X^*_{.95}$ & $p_X$ & $Q$ & $Q^*_{.95}$ & $p_Q$\\\midrule
+$(0,0;0,0)$ & 53.943 & 74.624 & 0.5269 & $1.06\times10^{-5}$ & $1.35\times10^{-4}$ & 0.5868 \\
+$(0,0;0,1)$ & 52.733 & 75.863 & 0.5948 & $4.81\times10^{-5}$ & $1.49\times10^{-4}$ & 0.2854 \\
+$(0,0;1,0)$ & 85.443 & 74.688 & 0.0060 & $<10^{-12}$ & $1.27\times10^{-4}$ & 0.9760 \\
+$(0,0;1,1)$ & 39.722 & 74.548 & 0.9561 & $1.36\times10^{-4}$ & $1.61\times10^{-4}$ & 0.0659 \\
+$(0,1;0,0)$ & 69.885 & 74.507 & 0.0818 & $1.31\times10^{-5}$ & $1.43\times10^{-4}$ & 0.4850 \\
+$(0,1;0,1)$ & 60.804 & 75.062 & 0.3573 & $1.07\times10^{-4}$ & $1.54\times10^{-4}$ & 0.1098 \\
+$(0,1;1,0)$ & 62.866 & 74.541 & 0.2715 & $1.56\times10^{-6}$ & $1.49\times10^{-4}$ & 0.8224 \\
+$(0,1;1,1)$ & 54.027 & 75.117 & 0.5948 & $7.51\times10^{-5}$ & $1.14\times10^{-4}$ & 0.1277 \\
+$(1,0;0,0)$ & 77.678 & 75.231 & 0.0419 & $6.53\times10^{-7}$ & $1.26\times10^{-4}$ & 0.8623 \\
+$(1,0;0,1)$ & 39.379 & 76.019 & 0.9721 & $1.05\times10^{-5}$ & $1.60\times10^{-4}$ & 0.6447 \\
+$(1,0;1,0)$ & 65.310 & 75.858 & 0.1996 & $1.79\times10^{-4}$ & $1.56\times10^{-4}$ & 0.0319 \\
+$(1,0;1,1)$ & 58.928 & 77.381 & 0.3992 & $9.42\times10^{-6}$ & $1.49\times10^{-4}$ & 0.6208 \\
+$(1,1;0,0)$ & 62.990 & 75.660 & 0.3114 & $6.93\times10^{-5}$ & $1.56\times10^{-4}$ & 0.2196 \\
+$(1,1;0,1)$ & 55.802 & 73.893 & 0.4651 & $3.49\times10^{-7}$ & $1.22\times10^{-4}$ & 0.7505 \\
+$(1,1;1,0)$ & 60.378 & 74.274 & 0.3014 & $6.32\times10^{-5}$ & $1.21\times10^{-4}$ & 0.1497 \\
+$(1,1;1,1)$ & 66.430 & 73.795 & 0.1637 & $3.52\times10^{-4}$ & $1.27\times10^{-4}$ & 0.0020 \\
+\bottomrule\end{tabular}\end{table}\par
+At the nominal 0.05 threshold, the physical Pearson checks flag $(0,0;1,0)$ and $(1,0;0,0)$; the block checks flag $(1,0;1,0)$ and $(1,1;1,1)$. A small block residual can coexist with a large count-level discrepancy. These findings are reported, not removed by selecting a more favorable statistic.\clearpage
+\par\begin{table}[htbp]\centering\footnotesize
+\caption{Frame-tracked fits derived from raw data. Numerical zeros below $10^{-12}$ are displayed as a bound, not as missing results.}\label{stab:gof_frame_tracked}
+\begin{tabular}{lrrrrrr}\toprule
+$(M_1,M_2;x,m)$ & $X^2$ & $X^*_{.95}$ & $p_X$ & $Q$ & $Q^*_{.95}$ & $p_Q$\\\midrule
+$(0,0;0,0)$ & 62.663 & 72.665 & 0.2655 & $3.74\times10^{-6}$ & $1.39\times10^{-4}$ & 0.6747 \\
+$(0,0;0,1)$ & 53.720 & 74.890 & 0.6108 & $3.78\times10^{-6}$ & $1.37\times10^{-4}$ & 0.7824 \\
+$(0,0;1,0)$ & 49.282 & 74.833 & 0.7285 & $1.46\times10^{-5}$ & $1.37\times10^{-4}$ & 0.5349 \\
+$(0,0;1,1)$ & 53.854 & 74.699 & 0.5349 & $9.25\times10^{-6}$ & $1.49\times10^{-4}$ & 0.5549 \\
+$(0,1;0,0)$ & 76.722 & 74.712 & 0.0299 & $4.54\times10^{-6}$ & $1.53\times10^{-4}$ & 0.7745 \\
+$(0,1;0,1)$ & 65.758 & 73.493 & 0.1896 & $4.67\times10^{-6}$ & $1.55\times10^{-4}$ & 0.7485 \\
+$(0,1;1,0)$ & 53.214 & 73.943 & 0.5669 & $<10^{-12}$ & $1.37\times10^{-4}$ & 0.9980 \\
+$(0,1;1,1)$ & 48.984 & 73.606 & 0.7565 & $7.94\times10^{-6}$ & $1.53\times10^{-4}$ & 0.6168 \\
+$(1,0;0,0)$ & 53.634 & 73.111 & 0.5689 & $1.94\times10^{-5}$ & $1.05\times10^{-4}$ & 0.4092 \\
+$(1,0;0,1)$ & 67.239 & 79.510 & 0.2076 & $1.96\times10^{-5}$ & $1.25\times10^{-4}$ & 0.3613 \\
+$(1,0;1,0)$ & 54.600 & 73.736 & 0.5529 & $1.22\times10^{-5}$ & $1.58\times10^{-4}$ & 0.6367 \\
+$(1,0;1,1)$ & 62.257 & 75.930 & 0.2715 & $<10^{-12}$ & $1.49\times10^{-4}$ & 1.0000 \\
+$(1,1;0,0)$ & 62.422 & 74.087 & 0.2515 & $2.96\times10^{-4}$ & $1.53\times10^{-4}$ & 0.0100 \\
+$(1,1;0,1)$ & 69.286 & 74.057 & 0.1417 & $1.56\times10^{-5}$ & $1.50\times10^{-4}$ & 0.5409 \\
+$(1,1;1,0)$ & 64.261 & 74.946 & 0.2116 & $7.16\times10^{-9}$ & $1.48\times10^{-4}$ & 0.9341 \\
+$(1,1;1,1)$ & 51.779 & 74.556 & 0.6208 & $1.09\times10^{-4}$ & $1.22\times10^{-4}$ & 0.0639 \\
+\bottomrule\end{tabular}\end{table}\par
+\par\begin{table}[htbp]\centering\footnotesize
+\caption{Reference-circuit model checks.}\label{stab:gof_refs}
+\begin{tabular}{lrrrrrr}\toprule
+Protocol & $X^2$ & $X^*_{.95}$ & $p_X$ & $Q$ & $Q^*_{.95}$ & $p_Q$\\\midrule
+Direct & 86.770 & 84.441 & 0.0379 & $2.20\times10^{-4}$ & $1.93\times10^{-4}$ & 0.0459 \\
+SWAP & 78.012 & 88.400 & 0.2016 & $3.24\times10^{-4}$ & $1.92\times10^{-4}$ & 0.0060 \\
+\bottomrule\end{tabular}\end{table}\par
+Direct preparation has $p_X=0.0379$, $p_Q=0.0459$; SWAP has $p_X=0.2016$, $p_Q=0.0060$. Thus high reference-state fidelity does not imply that the four-probe count model explains all measurements within shot noise.\clearpage
+\section{Numerical recovery and interval limitations}
+The logical CP-TNI fit uses the archived SCS settings (tolerance $10^{-7}$, 30,000 iterations) and explicit post-fit physicality checks. Separately, the full-receiver multinomial maximum-likelihood fit used to generate the GOF null has an $8\times8$ Choi matrix, trace-preserving constraints and probabilities bounded below by $10^{-10}$; its legacy SCS limit is 100,000 iterations.
+
+In the original direct-preparation GOF calculation, resample 396 reached that limit and returned a minimum Choi eigenvalue approximately $-1.025\times10^{-4}$, failing the existing physicality audit. The completed archive records a numerical retry on the \emph{same count sample}, not a discarded or replaced resample. A PSD/TP parameterization and numerical convex-gap certificate are used when the legacy fit fails its audit. Acceptance keeps the original minimum-eigenvalue threshold $-2\times10^{-6}$ and partial-trace residual threshold $2\times10^{-5}$, and additionally requires a normalized negative-log-likelihood gap at most $2\times10^{-7}$ in the recovery path. The numerical certificate is an audit criterion, not an exact-arithmetic proof.
+
+The direct reference has 501 solver-audit records (one fitted null plus 500 refits): 500 accepted legacy fits and one same-sample recovery. The SWAP reference has 482 accepted legacy fits and 19 same-sample recoveries among 501 records. Completed original network fits are retained without this repair. The full method, per-fit solver audits and regression input are included in \nolinkurl{NUMERICAL_METHOD.md}, \nolinkurl{solver_audit.jsonl} and the archive's repair directory. All 500 null statistics are retained for every reported GOF result.
+
+Percentile intervals can be distorted by projection and constraint boundaries. For the network's 160 measured tomography groups, 13 linear-inversion point estimates require nontrivial PSD projection; the most negative linear eigenvalue is $-0.006897$ and the largest Frobenius change is $0.007964$. Projection activity in the physical complex-state bootstrap ranges from 0.054 to 0.870 across sectors. The physical-process boundary fraction is 0.856--1.000; for the software-recovered process it is 0.814--1.000. Reference-process boundary fractions equal 1.000. Unlike the preceding two-resource acquisition, the current point estimates cannot all be described as projection-inactive.
+
+These diagnostics do not correct boundary bias or establish nominal 95\% coverage. The same reconstruction is applied to every resample, and the stated intervals quantify counting variation conditional on this acquisition and the assumed probes/measurement axes. SPAM, calibration uncertainty, drift, model discrepancy and repeated-day variability are not included. Model checks in S4 complement, but do not validate coverage of, these intervals. Interpretation should report point estimates, intervals, boundary diagnostics and model residuals together.
+
+\section{Calibration and readout diagnostics}
+The archived backend snapshot was captured at 12:50:26 UTC on 24 October 2026, approximately 6 h 50 min before the recorded job execution. It supplies nominal device properties, not a calibration measured at the instant each circuit ran.
+\par\begin{table}[htbp]\centering\small
+\caption{Backend-snapshot properties of the five selected physical qubits. Coherence times are microseconds, measurement duration is nanoseconds.}\label{stab:calib}
+\begin{tabular}{rrrrr}\toprule
+Qubit & $T_1$ ($\mu$s) & $T_2$ ($\mu$s) & Readout error & Duration (ns)\\\midrule
+60 & 223.67 & 151.11 & 0.01404 & 1940 \\
+61 & 167.85 & 217.22 & 0.00305 & 1940 \\
+70 & 161.03 & 191.11 & 0.00330 & 1940 \\
+71 & 209.19 & 147.33 & 0.00989 & 1940 \\
+80 & 264.75 & 226.95 & 0.00745 & 1940 \\
+\bottomrule\end{tabular}\end{table}\par
+\clearpage
+The separate readout response experiment prepares four two-bit computational states for each observed receiver pair. The mean diagonal assignment probabilities and matrix condition numbers below are measurements, not inverse-mitigated results. Labels ``before'' and ``after'' denote positions in the submitted design; their names alone do not prove the execution order of all interleaved job chunks.
+\par\begin{table}[htbp]\centering\small
+\caption{Measured two-bit response matrices; ordered pair is $(q_{3'},q_{4'})$.}\label{stab:readout}
+\begin{tabular}{llrr}\toprule
+Physical pair & Design label & Mean correct assignment & Condition number\\\midrule
+(60,71) & after & 0.97986 & 1.0427 \\
+(60,71) & before & 0.98041 & 1.0429 \\
+(61,60) & after & 0.98505 & 1.0315 \\
+(61,60) & before & 0.98578 & 1.0298 \\
+(70,71) & after & 0.98621 & 1.0330 \\
+(70,71) & before & 0.98608 & 1.0372 \\
+\bottomrule\end{tabular}\end{table}\par
+
+The network gate-calibration product $\prod_g(1-e_g)$ ranges from 0.9755 to 0.9767, whereas the recovered-state fidelities are 0.9237--0.9422. These are not directly comparable estimates of one parameter: the product assumes independent reported gate errors and excludes SPAM, idle noise and correlated error. Summed instruction durations are 2.408--2.688~$\mu$s, not scheduled critical-path time or QPU usage. We therefore do not attribute the fidelity deficit to a separately measured decoherence or crosstalk rate.
+
+\section{Correction overhead, baselines and discarded-output tests}
+The 720 matched raw/physical network circuit pairs have the same final receiver pair. Each uses 16 native two-qubit gates; physical correction adds zero two-qubit gates and 0--2 depth layers (mean 1.125, median 1). The next table gives depth increments per sector (constant over its probes/bases) and the physically recovered minus frame-tracked state fidelity. Difference intervals use the saved count-bootstrap distributions; they are not repeated-session confidence intervals or isolated gate-infidelity estimates.
+\par\begin{table}[htbp]\centering\small
+\caption{Measured/compiler overhead and state contrast.}\label{stab:overhead}
+\begin{tabular}{lrrl}\toprule
+$(M_1,M_2;x,m)$ & Added depth & Added 2Q gates & $F_{\rm physical}-F_{\rm tracked}$ [95\% interval]\\\midrule
+$(0,0;0,0)$ & 0 & 0 & -0.0095 [-0.0215, 0.0022] \\
+$(0,0;0,1)$ & 1 & 0 & 0.0054 [-0.0070, 0.0164] \\
+$(0,0;1,0)$ & 1 & 0 & 0.0043 [-0.0070, 0.0163] \\
+$(0,0;1,1)$ & 1 & 0 & -0.0116 [-0.0234, 0.0003] \\
+$(0,1;0,0)$ & 2 & 0 & -0.0021 [-0.0139, 0.0110] \\
+$(0,1;0,1)$ & 1 & 0 & 0.0151 [0.0020, 0.0263] \\
+$(0,1;1,0)$ & 2 & 0 & 0.0075 [-0.0053, 0.0181] \\
+$(0,1;1,1)$ & 1 & 0 & 0.0056 [-0.0082, 0.0163] \\
+$(1,0;0,0)$ & 1 & 0 & -0.0065 [-0.0197, 0.0055] \\
+$(1,0;0,1)$ & 1 & 0 & 0.0041 [-0.0077, 0.0165] \\
+$(1,0;1,0)$ & 1 & 0 & 0.0041 [-0.0072, 0.0155] \\
+$(1,0;1,1)$ & 0 & 0 & -0.0063 [-0.0188, 0.0050] \\
+$(1,1;0,0)$ & 1 & 0 & 0.0149 [0.0010, 0.0261] \\
+$(1,1;0,1)$ & 2 & 0 & 0.0115 [-0.0016, 0.0227] \\
+$(1,1;1,0)$ & 1 & 0 & 0.0115 [-0.0010, 0.0241] \\
+$(1,1;1,1)$ & 2 & 0 & 0.0027 [-0.0100, 0.0149] \\
+\bottomrule\end{tabular}\end{table}\par
+\clearpage
+Direct preparation uses four native two-qubit gates, depth 10--18 and pair $(70,71)$; the compiled SWAP reference uses one native two-qubit gate, depth 6--11 and pair $(61,60)$. The latter is the optimized compiled cost, not a claim that every written SWAP costs one gate. Network depth is 44--50 raw and 45--52 physical, ending at $(60,71)$. Different routes preclude interpreting reference differences as intrinsic resource performance or a causal cost of the Pauli correction alone.
+
+Direct and SWAP state fidelities are respectively 0.9777 and 0.9738, both above every physical network state. Their ideal-target preparations and paths differ from the full network. The same reference data are shared across sector comparisons, so these contrasts are not independent replicated benchmarks. Values, differences and interval definitions are retained in \nolinkurl{matched_baseline_comparisons.csv} and the baseline folders.
+
+The 192 diagnostic circuits measure selected receiver--discarded products. For the ideal $y=0$ theorem, the discarded expectations are
+\[
+\langle X_{1'}\rangle=(-1)^{M_1},\quad
+\langle X_{2'}\rangle=(-1)^m,\quad
+\langle Z_{0'}\rangle=(-1)^{m\oplus x}.
+\]
+There are 576 marginal estimates. After multiplication by the predicted signs, observed ranges are 0.9360--0.9756, 0.9404--0.9736 and 0.8726--0.9683 respectively. There are also 1152 connected-correlation estimates
+\[
+\langle A_R B_D\rangle-\langle A_R\rangle\langle B_D\rangle.
+\]
+Of their pointwise bootstrap intervals, 312 exclude zero, with maximum absolute estimate 0.1762. These are unadjusted, selected-observable diagnostics, not informationally complete five-qubit tomography or a multiple-testing-controlled proof of correlation. They expose departures from the ideal product-output prediction under the measurement model, but do not distinguish crosstalk from SPAM, correlated gate errors or temporal variation. Conversely, vanishing values for a selected set would not prove full quantum factorization.
+
+\textbf{Files supporting these diagnostics.} The immutable hardware archive contains \nolinkurl{final_layouts_and_counts_mapping.csv}, \nolinkurl{compiled_recovery_overhead.csv}, \nolinkurl{readout_response_summary.csv}, \nolinkurl{discarded_expectations.csv}, \nolinkurl{receiver_discarded_correlations.csv}, the corresponding raw counts, and numerical arrays. The manuscript tables are summaries of these records; no synthetic workflow-validation output is used as hardware evidence.
+\end{document}
