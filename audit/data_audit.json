@@ -1,0 +1,147 @@
+{
+  "input_archive": "applsci-fixed4.zip",
+  "hardware": {
+    "status": "VERIFIED_SAVED_IBM_HARDWARE_COUNTS",
+    "data_kind": "HARDWARE",
+    "backend": "ibm_phoenix",
+    "stage": "full",
+    "run_id": "full_4resources_run02",
+    "circuits": 1746,
+    "shots": 7151616,
+    "sha256": "99ce131823c6bc7b1cf50599adc079fbcf708cc7f46f44b07b7c88b6c646b188",
+    "job_ids": [
+      "dbeaj2npc3tc739lbri0",
+      "dbeaj3nsstms73fbnr60",
+      "dbeaj4fpc3tc739lbrl0",
+      "dbeaj57sstms73fbnr9g",
+      "dbeaj5om94ac738rftb0",
+      "dbeaj6fgdj9s73flerog"
+    ],
+    "protocols": {
+      "direct_preparation": 45,
+      "discarded_diagnostic": 192,
+      "network": 1440,
+      "readout_calibration": 24,
+      "swap_transfer": 45
+    },
+    "raw_files_checked": 1746,
+    "receiver_bit_order": "q4 q3",
+    "new_qpu_jobs_submitted": 0,
+    "verification_mode": "offline-preserved-hardware-evidence"
+  },
+  "manifest_entries_verified": 3373,
+  "count_file_sha256": "99ce131823c6bc7b1cf50599adc079fbcf708cc7f46f44b07b7c88b6c646b188",
+  "counts": {
+    "network": {
+      "state_rows": 48,
+      "process_rows": 32,
+      "gof_rows": 32
+    },
+    "direct_preparation": {
+      "state_rows": 1,
+      "process_rows": 1,
+      "gof_rows": 1
+    },
+    "swap_transfer": {
+      "state_rows": 1,
+      "process_rows": 1,
+      "gof_rows": 1
+    }
+  },
+  "independent_numeric_checks": {
+    "max_state_matrix_difference": 4.449557262054371e-16,
+    "max_reported_state_metric_difference": 5.732096353128213e-09,
+    "max_process_metric_difference": 2.220446049250313e-16,
+    "max_CI_difference": 4.440892098500626e-16,
+    "checks_include_all_50_state_rows_all_34_channel_rows_all_34_gof_rows": true,
+    "full_bootstrap_optimization_repeated": false,
+    "new_qpu_jobs": 0
+  },
+  "theory_check": {
+    "basis_count": 64,
+    "code_operator_count": 128,
+    "full_operator_count": 256,
+    "max_absolute_errors": [
+      1.1102230246251565e-16,
+      9.992007221626409e-16,
+      9.992007221626409e-16
+    ]
+  },
+  "main_metrics": {
+    "fidelity": {
+      "min": 0.9237164547717536,
+      "max": 0.942186593891542
+    },
+    "concurrence": {
+      "min": 0.7706991788928012,
+      "max": 0.822470767013188
+    },
+    "phase_error_rad": {
+      "min": 0.1071802241087579,
+      "max": 0.2426415199564272
+    },
+    "code_population": {
+      "min": 0.9487053132195152,
+      "max": 0.9611816406250004
+    }
+  },
+  "phase_ideal_inside_95_interval_count": 0,
+  "all_physical_concurrence_lower_bounds_positive": true,
+  "physical_bootstrap_boundary_fraction_range": [
+    0.856,
+    1.0
+  ],
+  "compiled_network_gates": [
+    16
+  ],
+  "compiled_network_depth": {
+    "physical": [
+      45,
+      52
+    ],
+    "raw": [
+      44,
+      50
+    ]
+  },
+  "recovery_depth_overhead": {
+    "pairs": 720,
+    "min": 0,
+    "max": 2,
+    "mean": 1.125,
+    "two_qubit_gate_increase_max": 0
+  },
+  "calibration_summary": {
+    "snapshot": "2026-10-24T12:50:26.018060+00:00",
+    "network_gate_duration_sum_seconds": [
+      2.408e-06,
+      2.688e-06
+    ],
+    "network_independent_proxy": [
+      0.9755059483117672,
+      0.9767011407874406
+    ]
+  },
+  "witnesses": {
+    "marginal_rows": 576,
+    "correlation_rows": 1152,
+    "pointwise_intervals_excluding_zero": 312,
+    "max_abs_correlation": 0.1761980056762695
+  },
+  "solver_retries": {
+    "direct_preparation": {
+      "legacy_SCS_accepted": 500,
+      "certified_same_count_recovery": 1
+    },
+    "swap_transfer": {
+      "legacy_SCS_accepted": 482,
+      "certified_same_count_recovery": 19
+    }
+  },
+  "not_performed": [
+    "No new IBM job or remote authentication",
+    "No repeat of full 500-refit numerical optimization",
+    "No independent coverage study",
+    "No cross-backend or repeated-day acquisition"
+  ]
+}
