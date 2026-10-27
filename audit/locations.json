@@ -1,0 +1,303 @@
+{
+  "main": {
+    "sec:introduction": {
+      "number": "1",
+      "page": "2"
+    },
+    "sec:model": {
+      "number": "2",
+      "page": "2"
+    },
+    "sec:scope": {
+      "number": "2.1",
+      "page": "2"
+    },
+    "eq:ordering": {
+      "number": "1",
+      "page": "2"
+    },
+    "eq:code": {
+      "number": "2",
+      "page": "3"
+    },
+    "tab:notation": {
+      "number": "1",
+      "page": "3"
+    },
+    "sec:preparation": {
+      "number": "2.2",
+      "page": "3"
+    },
+    "eq:amplitudes": {
+      "number": "3",
+      "page": "3"
+    },
+    "fig:one": {
+      "number": "1",
+      "page": "3"
+    },
+    "fig:two": {
+      "number": "2",
+      "page": "3"
+    },
+    "eq:resource": {
+      "number": "4",
+      "page": "4"
+    },
+    "fig:resource": {
+      "number": "3",
+      "page": "4"
+    },
+    "sec:circuit": {
+      "number": "2.3",
+      "page": "4"
+    },
+    "eq:unitary": {
+      "number": "5",
+      "page": "4"
+    },
+    "fig:transfer": {
+      "number": "4",
+      "page": "4"
+    },
+    "sec:theorem": {
+      "number": "3",
+      "page": "5"
+    },
+    "sec:factorization": {
+      "number": "3.1",
+      "page": "5"
+    },
+    "thm:channel": {
+      "number": "1",
+      "page": "5"
+    },
+    "eq:frame": {
+      "number": "6",
+      "page": "5"
+    },
+    "eq:factorization": {
+      "number": "7",
+      "page": "5"
+    },
+    "eq:discarded": {
+      "number": "8",
+      "page": "5"
+    },
+    "eq:rawchannel": {
+      "number": "9",
+      "page": "5"
+    },
+    "eq:basisproof": {
+      "number": "10",
+      "page": "5"
+    },
+    "sec:recovery": {
+      "number": "3.2",
+      "page": "5"
+    },
+    "eq:inverse": {
+      "number": "11",
+      "page": "5"
+    },
+    "eq:rawparity": {
+      "number": "12",
+      "page": "5"
+    },
+    "eq:rawcoherence": {
+      "number": "13",
+      "page": "6"
+    },
+    "sec:methods": {
+      "number": "4",
+      "page": "6"
+    },
+    "sec:acquisition": {
+      "number": "4.1",
+      "page": "6"
+    },
+    "tab:inventory": {
+      "number": "2",
+      "page": "6"
+    },
+    "sec:state_methods": {
+      "number": "4.2",
+      "page": "6"
+    },
+    "eq:chi": {
+      "number": "14",
+      "page": "6"
+    },
+    "eq:concurrence": {
+      "number": "15",
+      "page": "7"
+    },
+    "sec:process_methods": {
+      "number": "4.3",
+      "page": "7"
+    },
+    "eq:block": {
+      "number": "16",
+      "page": "7"
+    },
+    "eq:cptni": {
+      "number": "17",
+      "page": "7"
+    },
+    "eq:metrics": {
+      "number": "18",
+      "page": "7"
+    },
+    "eq:pearson": {
+      "number": "19",
+      "page": "7"
+    },
+    "sec:results": {
+      "number": "5",
+      "page": "8"
+    },
+    "sec:phase_results": {
+      "number": "5.1",
+      "page": "8"
+    },
+    "tab:phases": {
+      "number": "3",
+      "page": "8"
+    },
+    "sec:entanglement_results": {
+      "number": "5.2",
+      "page": "8"
+    },
+    "tab:states": {
+      "number": "4",
+      "page": "9"
+    },
+    "sec:channel_results": {
+      "number": "5.3",
+      "page": "9"
+    },
+    "fig:process": {
+      "number": "5",
+      "page": "9"
+    },
+    "tab:gof": {
+      "number": "5",
+      "page": "10"
+    },
+    "sec:implementation": {
+      "number": "6",
+      "page": "10"
+    },
+    "sec:cost": {
+      "number": "6.1",
+      "page": "10"
+    },
+    "tab:cost": {
+      "number": "6",
+      "page": "11"
+    },
+    "sec:overhead": {
+      "number": "6.2",
+      "page": "11"
+    },
+    "sec:debugging": {
+      "number": "6.3",
+      "page": "11"
+    },
+    "eq:five_setting": {
+      "number": "20",
+      "page": "11"
+    },
+    "sec:methodscomparison": {
+      "number": "6.4",
+      "page": "12"
+    },
+    "tab:methods": {
+      "number": "7",
+      "page": "12"
+    },
+    "sec:limits": {
+      "number": "7",
+      "page": "12"
+    },
+    "sec:conclusions": {
+      "number": "8",
+      "page": "13"
+    },
+    "app:scope": {
+      "number": "A",
+      "page": "14"
+    },
+    "eq:paritydephase": {
+      "number": "A1",
+      "page": "14"
+    },
+    "tab:appbasis": {
+      "number": "A1",
+      "page": "14"
+    },
+    "LastPage": {
+      "number": "A",
+      "page": "15"
+    }
+  },
+  "deriv": {},
+  "supp": {
+    "stab:jobs": {
+      "number": "S1",
+      "page": "1"
+    },
+    "stab:state_raw": {
+      "number": "S2",
+      "page": "2"
+    },
+    "stab:state_physical": {
+      "number": "S3",
+      "page": "3"
+    },
+    "stab:state_frame_tracked": {
+      "number": "S4",
+      "page": "4"
+    },
+    "stab:state_baselines": {
+      "number": "S5",
+      "page": "4"
+    },
+    "stab:process_physical": {
+      "number": "S6",
+      "page": "5"
+    },
+    "stab:process_frame_tracked": {
+      "number": "S7",
+      "page": "6"
+    },
+    "stab:process_refs": {
+      "number": "S8",
+      "page": "6"
+    },
+    "stab:gof_physical": {
+      "number": "S9",
+      "page": "7"
+    },
+    "stab:gof_frame_tracked": {
+      "number": "S10",
+      "page": "8"
+    },
+    "stab:gof_refs": {
+      "number": "S11",
+      "page": "8"
+    },
+    "stab:calib": {
+      "number": "S12",
+      "page": "9"
+    },
+    "stab:readout": {
+      "number": "S13",
+      "page": "10"
+    },
+    "stab:overhead": {
+      "number": "S14",
+      "page": "10"
+    }
+  }
+}
