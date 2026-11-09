@@ -1,65 +1,71 @@
 {
-  "template": {
-    "passes_from_clean_directory": 3,
-    "pages": 15,
-    "undefined_references_or_citations": false,
-    "overfull_boxes": false,
-    "text_placeholder_scan_passed": true,
-    "all_pages_rendered_and_visually_inspected": true
+  "last_updated": "2026-11-09",
+  "journal_manuscript_id": "applsci-4605095",
+  "main_source": "manuscript/template3revised.tex",
+  "main_submitted_pdf": "manuscript/Manuscriptrevised2.pdf",
+  "author_supplied_main_pdf_sha256": "edae0a7f48a1a110b3391cf40e3e069c1b744ef1d73f1a3650dbc4ac9755bfe5",
+  "local_build_pdf_sha256": "965ff74c1983e14de6ac6670ddc895069d679e8790e4df476f5ed7defcbf233f",
+  "local_build_pdf_is_not_the_author_pdf": true,
+  "supplementary_documents": [
+    "supplement/Supplementary_Derivations.tex",
+    "supplement/Supplementary_Run02_Tables.tex"
+  ],
+  "revised_document_date": "9 November 2026",
+  "build_engine": "pdfTeX 3.141592653-2.6-1.40.26 (TeX Live 2025/dev/Debian)",
+  "build_passes": 3,
+  "builds": {
+    "template3revised": {
+      "compiled_pages": 17,
+      "log": "audit/current_build_logs/build_template3revised.log",
+      "result": "successful",
+      "errors": 0,
+      "overfull_hbox_count": 1,
+      "underfull_hbox_count": 0,
+      "undefined_reference_count": 0,
+      "overfull_details": [
+        [
+          "4.98134pt too wide",
+          "209--210"
+        ]
+      ]
+    },
+    "Supplementary_Derivations": {
+      "compiled_pages": 2,
+      "log": "audit/current_build_logs/build_Supplementary_Derivations.log",
+      "result": "successful",
+      "errors": 0,
+      "overfull_hbox_count": 0,
+      "underfull_hbox_count": 0,
+      "undefined_reference_count": 0,
+      "overfull_details": []
+    },
+    "Supplementary_Run02_Tables": {
+      "compiled_pages": 11,
+      "log": "audit/current_build_logs/build_Supplementary_Run02_Tables.log",
+      "result": "successful",
+      "errors": 0,
+      "overfull_hbox_count": 0,
+      "underfull_hbox_count": 0,
+      "undefined_reference_count": 0,
+      "overfull_details": []
+    }
   },
-  "Supplementary_Derivations": {
-    "passes_from_clean_directory": 2,
-    "pages": 2,
-    "undefined_references_or_citations": false,
-    "overfull_boxes": false,
-    "text_placeholder_scan_passed": true,
-    "all_pages_rendered_and_visually_inspected": true
+  "response_letter": {
+    "docx": "responses/Response_to_Reviewers_MDPI.docx",
+    "pdf": "responses/Response_to_Reviewers_MDPI.pdf",
+    "pages": 8
   },
-  "Supplementary_Run02_Tables": {
-    "passes_from_clean_directory": 2,
-    "pages": 11,
-    "undefined_references_or_citations": false,
-    "overfull_boxes": false,
-    "text_placeholder_scan_passed": true,
-    "all_pages_rendered_and_visually_inspected": true
-  },
-  "references": {
-    "bibliography_entries": 18,
-    "all_cited": true,
-    "first_appearance_order": true
-  },
-  "MDPI_Definitions_unchanged": true,
-  "four_circuit_PDF_internal_labels_resolved": true,
-  "Response_Reviewer_1": {
-    "pages": 4,
-    "docx_rendered_to_PDF": true,
-    "all_pages_visually_inspected": true
-  },
-  "Response_Reviewer_2": {
-    "pages": 5,
-    "docx_rendered_to_PDF": true,
-    "all_pages_visually_inspected": true
-  },
-  "Response_Reviewer_3": {
-    "pages": 4,
-    "docx_rendered_to_PDF": true,
-    "all_pages_visually_inspected": true
-  },
+  "hardware_archive": "supplement/ibm_phoenix_run02_reproducible.zip",
   "hardware_archive_sha256": "d9a3ec3a5ef620e13216f9e4719508ea5148e4633ec26868e1f83cd1c382baab",
-  "hardware_archive_preserved_byte_for_byte": true,
-  "audit_script_portable_test_passed": true,
-  "environment": {
-    "python": "3.13.5 (main, Jul 15 2026, 20:25:40) [GCC 14.2.0]",
-    "platform": "Linux-6.18.55-x86_64-with-glibc2.41",
-    "latex": "pdfTeX / TeX Live 2025-dev (Debian)",
-    "docx_renderer": "LibreOffice through docx skill renderer"
-  },
+  "hardware_archive_unchanged_from_prior_review_package": true,
+  "new_qpu_acquisitions": 0,
+  "scope": "Editorial synchronization, dates, supplementary titles, build audit, page/source references; no new experiment or numerical refit.",
+  "historical_build_logs_directory": "audit/previous_build_logs/ (not current evidence)",
   "not_performed": [
-    "New QPU jobs",
-    "Remote IBM provenance authentication",
-    "Full re-optimization of all 500 bootstrap fits",
-    "Repeated-day or cross-backend study",
-    "Independent statistical coverage study",
-    "Copyright permission confirmation"
+    "New QPU runs",
+    "Second backend or independent repetition",
+    "Re-optimization of all bootstrap estimates",
+    "Re-validation of statistical coverage",
+    "IBM-side remote authentication"
   ]
 }

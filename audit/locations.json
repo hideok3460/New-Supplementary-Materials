@@ -1,4 +1,5 @@
 {
+  "provenance": "Locators generated from 9 November 2026 local pdfLaTeX build .aux files; source is manuscript/template3revised.tex.",
   "main": {
     "sec:introduction": {
       "number": "1",
@@ -6,15 +7,15 @@
     },
     "sec:model": {
       "number": "2",
-      "page": "2"
+      "page": "3"
     },
     "sec:scope": {
       "number": "2.1",
-      "page": "2"
+      "page": "3"
     },
     "eq:ordering": {
       "number": "1",
-      "page": "2"
+      "page": "3"
     },
     "eq:code": {
       "number": "2",
@@ -38,7 +39,7 @@
     },
     "fig:two": {
       "number": "2",
-      "page": "3"
+      "page": "4"
     },
     "eq:resource": {
       "number": "4",
@@ -58,7 +59,7 @@
     },
     "fig:transfer": {
       "number": "4",
-      "page": "4"
+      "page": "5"
     },
     "sec:theorem": {
       "number": "3",
@@ -102,7 +103,7 @@
     },
     "eq:rawparity": {
       "number": "12",
-      "page": "5"
+      "page": "6"
     },
     "eq:rawcoherence": {
       "number": "13",
@@ -122,11 +123,11 @@
     },
     "sec:state_methods": {
       "number": "4.2",
-      "page": "6"
+      "page": "7"
     },
     "eq:chi": {
       "number": "14",
-      "page": "6"
+      "page": "7"
     },
     "eq:concurrence": {
       "number": "15",
@@ -150,7 +151,7 @@
     },
     "eq:pearson": {
       "number": "19",
-      "page": "7"
+      "page": "8"
     },
     "sec:results": {
       "number": "5",
@@ -166,10 +167,14 @@
     },
     "sec:entanglement_results": {
       "number": "5.2",
-      "page": "8"
+      "page": "9"
     },
     "tab:states": {
       "number": "4",
+      "page": "9"
+    },
+    "fig:benchmark": {
+      "number": "5",
       "page": "9"
     },
     "sec:channel_results": {
@@ -177,20 +182,20 @@
       "page": "9"
     },
     "fig:process": {
-      "number": "5",
-      "page": "9"
-    },
-    "tab:gof": {
-      "number": "5",
-      "page": "10"
-    },
-    "sec:implementation": {
       "number": "6",
       "page": "10"
     },
+    "tab:gof": {
+      "number": "5",
+      "page": "11"
+    },
+    "sec:implementation": {
+      "number": "6",
+      "page": "11"
+    },
     "sec:cost": {
       "number": "6.1",
-      "page": "10"
+      "page": "11"
     },
     "tab:cost": {
       "number": "6",
@@ -198,47 +203,55 @@
     },
     "sec:overhead": {
       "number": "6.2",
-      "page": "11"
+      "page": "12"
     },
     "sec:debugging": {
       "number": "6.3",
-      "page": "11"
+      "page": "12"
     },
     "eq:five_setting": {
       "number": "20",
-      "page": "11"
+      "page": "12"
+    },
+    "sec:applicationcriterion": {
+      "number": "6.4",
+      "page": "13"
+    },
+    "tab:decision": {
+      "number": "7",
+      "page": "13"
     },
     "sec:methodscomparison": {
-      "number": "6.4",
-      "page": "12"
+      "number": "6.5",
+      "page": "14"
     },
     "tab:methods": {
-      "number": "7",
-      "page": "12"
+      "number": "8",
+      "page": "14"
     },
     "sec:limits": {
       "number": "7",
-      "page": "12"
+      "page": "14"
     },
     "sec:conclusions": {
       "number": "8",
-      "page": "13"
+      "page": "15"
     },
     "app:scope": {
       "number": "A",
-      "page": "14"
+      "page": "16"
     },
     "eq:paritydephase": {
       "number": "A1",
-      "page": "14"
+      "page": "16"
     },
     "tab:appbasis": {
       "number": "A1",
-      "page": "14"
+      "page": "16"
     },
     "LastPage": {
       "number": "A",
-      "page": "15"
+      "page": "17"
     }
   },
   "deriv": {},

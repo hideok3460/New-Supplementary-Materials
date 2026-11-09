@@ -12,9 +12,9 @@
 \begin{document}
 \begin{center}
 {\LARGE\bfseries Supplementary Run02 Tables}\par\vspace{6pt}
-{\normalsize Exact Logical-Channel Equivalence and Code-Space-Leakage-Aware Tomography of a Five-Qubit Encoded-Qubit Transfer Circuit}\par\vspace{4pt}
+{\normalsize Ideal Fixed-Code Channel Equivalence and Single-Session Hardware Diagnostics of a Five-Qubit Coherent State-Transfer Circuit}\par\vspace{4pt}
 Ami Ukai, Syunsuke Fujiwara, Takahiko Mori and Hideaki Okazaki\par
-Manuscript applsci-4605095 --- revised 26 October 2026
+Manuscript applsci-4605095 --- revised 9 November 2026
 \end{center}
 
 These tables are generated from the completed, preserved run02 analyses supplied with the manuscript. All intervals are pointwise 95\% multinomial counting-bootstrap intervals from 500 resamples, not systematic, calibration, drift or guaranteed boundary-coverage intervals. No new QPU job or full bootstrap optimization was performed for this manuscript audit. Numbers below are rounded for display; the CSV files retain precision.
@@ -38,7 +38,7 @@ The normalized receiver-count file has SHA-256
 \begin{quote}\small\nolinkurl{99ce131823c6bc7b1cf50599adc079fbcf708cc7f46f44b07b7c88b6c646b188}\end{quote}
 The supplied audit verifies 1746 raw-count records against the manifest and 3373 file hashes in the preserved archive. It rederives all 50 listed state estimates from counts, checks all 34 process metrics/objectives using saved Choi matrices, recomputes percentile intervals from stored 500-resample arrays, and recomputes all 34 GOF $p$-values. Largest discrepancies are $4.45\times10^{-16}$ for state matrices, $5.74\times10^{-9}$ for scalar state metrics (concurrence eigensolver rounding), $2.23\times10^{-16}$ for process metrics and $4.45\times10^{-16}$ for interval endpoints. These checks establish internal reproducibility of saved records, not independent IBM-side authentication or frequentist coverage.
 
-The core code uses $y=0$. Resource/control labels are written $(M_1,M_2;x,m)$. The current full acquisition replaces the previous two-resource experiment as the primary quantitative evidence. It is not pooled with that pilot as a replicated resource comparison.
+The core code uses $y=0$. Resource/control labels are written $(M_1,M_2;x,m)$. This single-session, full-family acquisition is the primary quantitative evidence for the present article. The six job chunks are not independent experimental replications.
 \clearpage
 \section{Full-state phase, concurrence and code population}
 For raw states, phase is the branch-ordered element $c_{uv}=\langle u|\rho|v\rangle$, where

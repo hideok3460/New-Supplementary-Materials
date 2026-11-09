@@ -1,0 +1,248 @@
+{
+  "schema_version": 2,
+  "source_archive": "applsci-4605095frevised.zip",
+  "source_archive_sha256": "51c3feb9979d4386057397f407e255d06d22850279c716affe1aa2266a800d52",
+  "note": "Exact selected source copies only. Repository README and other newly authored guidance are not historical source evidence.",
+  "files": [
+    {
+      "path": "supplement/Supplementary_Derivations.pdf",
+      "source_member": "applsci-4605095frevised/supplement/Supplementary_Derivations.pdf",
+      "bytes": 177488,
+      "sha256": "6e0048a16f627697a93f77938646351ab6d8254ce795401d00ff8ab8f6d22920"
+    },
+    {
+      "path": "supplement/Supplementary_Derivations.tex",
+      "source_member": "applsci-4605095frevised/supplement/Supplementary_Derivations.tex",
+      "bytes": 6841,
+      "sha256": "0d35ff51986d50d663a5739b702601ccb42f40ddd475e88bd866651ff0299c1b"
+    },
+    {
+      "path": "supplement/Supplementary_Run02_Tables.pdf",
+      "source_member": "applsci-4605095frevised/supplement/Supplementary_Run02_Tables.pdf",
+      "bytes": 376698,
+      "sha256": "933381e3eacbe682534d6b3cd3aee0736509aa4dbfaf3e7fc10beec101663ad4"
+    },
+    {
+      "path": "supplement/Supplementary_Run02_Tables.tex",
+      "source_member": "applsci-4605095frevised/supplement/Supplementary_Run02_Tables.tex",
+      "bytes": 32024,
+      "sha256": "cbda2ab0406384fde50adacb21c47f3b98b5163d3d21fb180691c2d4c33b35c3"
+    },
+    {
+      "path": "supplement/ibm_phoenix_run02_reproducible.zip",
+      "source_member": "applsci-4605095frevised/supplement/ibm_phoenix_run02_reproducible.zip",
+      "bytes": 28979654,
+      "sha256": "d9a3ec3a5ef620e13216f9e4719508ea5148e4633ec26868e1f83cd1c382baab"
+    },
+    {
+      "path": "supplement/tables/calibration_qubits.tex",
+      "source_member": "applsci-4605095frevised/supplement/tables/calibration_qubits.tex",
+      "bytes": 205,
+      "sha256": "185613836ba0e1927dd8e81e16fd755f7a72e0bb3c3f60cf294548adb57d3147"
+    },
+    {
+      "path": "supplement/tables/direct_preparation_physical_gof.tex",
+      "source_member": "applsci-4605095frevised/supplement/tables/direct_preparation_physical_gof.tex",
+      "bytes": 95,
+      "sha256": "f64f4dff65f708c1c3af61a7cf1d3b2176c8ffb23d393a21be168cc0517a8938"
+    },
+    {
+      "path": "supplement/tables/direct_preparation_physical_process.tex",
+      "source_member": "applsci-4605095frevised/supplement/tables/direct_preparation_physical_process.tex",
+      "bytes": 97,
+      "sha256": "14420a788548a7d2b23366b6fefb225423ecf3db8b36923275ecc9c37196bf39"
+    },
+    {
+      "path": "supplement/tables/direct_preparation_physical_state.tex",
+      "source_member": "applsci-4605095frevised/supplement/tables/direct_preparation_physical_state.tex",
+      "bytes": 96,
+      "sha256": "969c95660d8ef45dd39e2b9974990554188747988dcb038339883cbd5315b173"
+    },
+    {
+      "path": "supplement/tables/jobs_rows.tex",
+      "source_member": "applsci-4605095frevised/supplement/tables/jobs_rows.tex",
+      "bytes": 366,
+      "sha256": "fd6c35bf0d249cbd6d9f8320a7072b81150b3a1786b5f376e705959556fa8832"
+    },
+    {
+      "path": "supplement/tables/network_frame_tracked_gof.tex",
+      "source_member": "applsci-4605095frevised/supplement/tables/network_frame_tracked_gof.tex",
+      "bytes": 1504,
+      "sha256": "5b8f664c03d41f69e3cfa1807477b40551ef311e450e0132f8c83b39ccf29ae8"
+    },
+    {
+      "path": "supplement/tables/network_frame_tracked_process.tex",
+      "source_member": "applsci-4605095frevised/supplement/tables/network_frame_tracked_process.tex",
+      "bytes": 1536,
+      "sha256": "1fe9de1bff090db3f91588f29e4145ca9073808ed3b978f6bcb1fc94509068d5"
+    },
+    {
+      "path": "supplement/tables/network_frame_tracked_state.tex",
+      "source_member": "applsci-4605095frevised/supplement/tables/network_frame_tracked_state.tex",
+      "bytes": 1536,
+      "sha256": "dd79d643b7324984262b5ab0d120a8e82f9e58186bf23fda4b0e25a9c64bc122"
+    },
+    {
+      "path": "supplement/tables/network_physical_gof.tex",
+      "source_member": "applsci-4605095frevised/supplement/tables/network_physical_gof.tex",
+      "bytes": 1512,
+      "sha256": "3f69da89e09eb518dba24dca2f0bfccf85e8e7ebe8c1d912721f795cbb6bfa44"
+    },
+    {
+      "path": "supplement/tables/network_physical_process.tex",
+      "source_member": "applsci-4605095frevised/supplement/tables/network_physical_process.tex",
+      "bytes": 1544,
+      "sha256": "ac6acd5e9bc2ed56bfb0bb190979c608520dc1f1b8fc7265387f7639ca52f815"
+    },
+    {
+      "path": "supplement/tables/network_physical_state.tex",
+      "source_member": "applsci-4605095frevised/supplement/tables/network_physical_state.tex",
+      "bytes": 1536,
+      "sha256": "8f65f7687313d928ff7e03aa8b904be2ef9deda786f7f38cb10aedd9c3f1ac4e"
+    },
+    {
+      "path": "supplement/tables/network_raw_state.tex",
+      "source_member": "applsci-4605095frevised/supplement/tables/network_raw_state.tex",
+      "bytes": 1512,
+      "sha256": "af15f31f0830a3ab723cb988abbfb500e3f4fe17853aa7f85e3b98d0e5de945f"
+    },
+    {
+      "path": "supplement/tables/overhead_rows.tex",
+      "source_member": "applsci-4605095frevised/supplement/tables/overhead_rows.tex",
+      "bytes": 803,
+      "sha256": "ddee09738517a270bb82cc2547e48130e94cb17f677045721c611dcfb9068e54"
+    },
+    {
+      "path": "supplement/tables/readout_rows.tex",
+      "source_member": "applsci-4605095frevised/supplement/tables/readout_rows.tex",
+      "bytes": 231,
+      "sha256": "0e5813818fb4c28bdabdff16b883c3420b9f9f3ccf75bc0880652a50f233910d"
+    },
+    {
+      "path": "supplement/tables/swap_transfer_physical_gof.tex",
+      "source_member": "applsci-4605095frevised/supplement/tables/swap_transfer_physical_gof.tex",
+      "bytes": 95,
+      "sha256": "8eedd9105f970939f6df53275f330bf1a72b03bb3af9c851ccfb2ed1a9f19d5b"
+    },
+    {
+      "path": "supplement/tables/swap_transfer_physical_process.tex",
+      "source_member": "applsci-4605095frevised/supplement/tables/swap_transfer_physical_process.tex",
+      "bytes": 97,
+      "sha256": "5f68c89d1943b6207d496e4caf0a52cd4699cb1cf2655c705e79d2aa4300cfc2"
+    },
+    {
+      "path": "supplement/tables/swap_transfer_physical_state.tex",
+      "source_member": "applsci-4605095frevised/supplement/tables/swap_transfer_physical_state.tex",
+      "bytes": 96,
+      "sha256": "9dfc057acda422cc41640dd1393ad854285eb27e1a4998e291e8dfc80f4cdf39"
+    },
+    {
+      "path": "audit/BUILD_VALIDATION.json",
+      "source_member": "applsci-4605095frevised/audit/BUILD_VALIDATION.json",
+      "bytes": 2664,
+      "sha256": "127eb20b391e97e7f76bae8bf59c8596b30fb1fd90226e1bb0ae172f705dcdd3"
+    },
+    {
+      "path": "audit/VALIDATION_JA.md",
+      "source_member": "applsci-4605095frevised/audit/VALIDATION_JA.md",
+      "bytes": 2127,
+      "sha256": "9bec2a32868dfaa111c522ddff47546146aec1b1e0991abcaf142ad58dbe22f4"
+    },
+    {
+      "path": "audit/calibration_qubits.csv",
+      "source_member": "applsci-4605095frevised/audit/calibration_qubits.csv",
+      "bytes": 356,
+      "sha256": "ccef8b4239cc9f8ff2b300c3208843bfcfe914457f025faf8e0d63a082f17859"
+    },
+    {
+      "path": "audit/current_build_logs/build_Supplementary_Derivations.log",
+      "source_member": "applsci-4605095frevised/audit/current_build_logs/build_Supplementary_Derivations.log",
+      "bytes": 22458,
+      "sha256": "d40f13a2f49c8428c5bc9d7451966d9ec2810952e25e768cf98b356473f51331"
+    },
+    {
+      "path": "audit/current_build_logs/build_Supplementary_Run02_Tables.log",
+      "source_member": "applsci-4605095frevised/audit/current_build_logs/build_Supplementary_Run02_Tables.log",
+      "bytes": 23640,
+      "sha256": "02f8270d7577d2ce759dce7ea572751de48ea3420447047a700aadea673eb7cd"
+    },
+    {
+      "path": "audit/current_build_logs/build_template3revised.log",
+      "source_member": "applsci-4605095frevised/audit/current_build_logs/build_template3revised.log",
+      "bytes": 59182,
+      "sha256": "f4c1510cbc6380264cb4a8c6b6907521bc409ecae5292f3159fab897aa90d7b8"
+    },
+    {
+      "path": "audit/data_audit.json",
+      "source_member": "applsci-4605095frevised/audit/data_audit.json",
+      "bytes": 3768,
+      "sha256": "248f7f549e3e662014b9ab82bda7accb4a86bf78e0301823fc4933317809677f"
+    },
+    {
+      "path": "audit/direct_preparation_state_values.csv",
+      "source_member": "applsci-4605095frevised/audit/direct_preparation_state_values.csv",
+      "bytes": 2916,
+      "sha256": "7509b770e186546ba1d7a4a7926711433b020dd8bc1556d9084000ddaa1ef572"
+    },
+    {
+      "path": "audit/input_archives.json",
+      "source_member": "applsci-4605095frevised/audit/input_archives.json",
+      "bytes": 832,
+      "sha256": "1d9779186eb72ef2f5102959754735af21ac3340b3ff6713ff8b489b46d9c783"
+    },
+    {
+      "path": "audit/locations.json",
+      "source_member": "applsci-4605095frevised/audit/locations.json",
+      "bytes": 5595,
+      "sha256": "26bbf761a9a3b22b5d74f83f8a3438819e31ab30a98b4c9e413933fafea93785"
+    },
+    {
+      "path": "audit/network_state_values.csv",
+      "source_member": "applsci-4605095frevised/audit/network_state_values.csv",
+      "bytes": 81420,
+      "sha256": "ec820e1154077d549b233f14f49ae0ee2daaf7e83010a25bebe3052a02f1ffd0"
+    },
+    {
+      "path": "audit/previous_build_logs/BUILD_VALIDATION_previous_round.json",
+      "source_member": "applsci-4605095frevised/audit/previous_build_logs/BUILD_VALIDATION_previous_round.json",
+      "bytes": 2085,
+      "sha256": "131cf1f08b8a736e920827ef528781530e28687b0fe90da08a3609c556c5a3e9"
+    },
+    {
+      "path": "audit/previous_build_logs/build_Supplementary_Derivations.log",
+      "source_member": "applsci-4605095frevised/audit/previous_build_logs/build_Supplementary_Derivations.log",
+      "bytes": 22418,
+      "sha256": "4175d3918c5c37a4e6c37be0844ddace5082fb0d22e7bb5433a6c13aee1cfcf1"
+    },
+    {
+      "path": "audit/previous_build_logs/build_Supplementary_Run02_Tables.log",
+      "source_member": "applsci-4605095frevised/audit/previous_build_logs/build_Supplementary_Run02_Tables.log",
+      "bytes": 23600,
+      "sha256": "c6690830e7c670aa4fbd336bb5e1edf6cf5f25c2854f713671bceb197e230d8a"
+    },
+    {
+      "path": "audit/previous_build_logs/build_template.log",
+      "source_member": "applsci-4605095frevised/audit/previous_build_logs/build_template.log",
+      "bytes": 58351,
+      "sha256": "959225b4f4eb9ed447f5aa1bd9153d91a7fdf32ca974f8a0d27352fb03255935"
+    },
+    {
+      "path": "audit/recheck_saved_results.py",
+      "source_member": "applsci-4605095frevised/audit/recheck_saved_results.py",
+      "bytes": 13794,
+      "sha256": "905738277f33362d4e1ea9ee9c6e7a87767f6e483b5bd70ef4a0d58f01d61aa9"
+    },
+    {
+      "path": "audit/requirements-audit.txt",
+      "source_member": "applsci-4605095frevised/audit/requirements-audit.txt",
+      "bytes": 19,
+      "sha256": "6c7796c75d62bed74a0cf7e6da0b4fd1b8ee0cf10609d986025bb24a303d1877"
+    },
+    {
+      "path": "audit/swap_transfer_state_values.csv",
+      "source_member": "applsci-4605095frevised/audit/swap_transfer_state_values.csv",
+      "bytes": 2914,
+      "sha256": "3b7a16bd4da9ce5af07042cfb3d2db6028332bb49b6bdbdf8c1d5f4a33ee8f84"
+    }
+  ]
+}

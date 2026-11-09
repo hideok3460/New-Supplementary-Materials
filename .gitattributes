@@ -1,0 +1,6 @@
+# Preserve source archive bytes and checksums across Windows/macOS/Linux.
+# -text disables line-ending conversion; it does not prohibit readable diffs.
+* -text
+*.zip binary
+*.pdf binary
+*.png binary

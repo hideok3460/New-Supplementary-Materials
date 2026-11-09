@@ -1,7 +1,15 @@
 {
-  "primary": "applsci-fixed4.zip",
   "original_submission": "applsci-4605095ver2(3).zip",
   "hardware_archive": "ibm_phoenix_run02_reproducible.zip",
   "hardware_archive_sha256": "d9a3ec3a5ef620e13216f9e4719508ea5148e4633ec26868e1f83cd1c382baab",
-  "hardware_archive_unchanged": true
+  "hardware_archive_unchanged": true,
+  "final_manuscript_archive": "Manuscriptrevised2 (1).zip",
+  "final_manuscript_archive_sha256": "a118046a7bd273f6b433cb70684bd0bbb9d2d2198bc5fba86e03e950410612e9",
+  "previous_review_archive": "applsci-4605095_revised3_reviewers (1).zip",
+  "previous_review_archive_sha256": "6457fc2215a9f872239b2a22b3f4533a84a4053fe8f52807e13f9f6fc1a75f4e",
+  "final_main_source": "manuscript/template3revised.tex",
+  "final_pdf": "manuscript/Manuscriptrevised2.pdf",
+  "audit_updated_on": "2026-11-09",
+  "historical_primary": "applsci-fixed4.zip",
+  "primary": "Manuscriptrevised2 (1).zip"
 }

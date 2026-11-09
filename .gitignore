@@ -1,0 +1,14 @@
+# Local environments and editor/runtime files; not a secret scanner.
+.venv/
+venv/
+.qiskit/
+.env
+.env.*
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+.DS_Store
+Thumbs.db
+# Local audit runs should stay outside the public repository.
+audit_recheck/
+local_work/

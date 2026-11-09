@@ -1,15 +1,16 @@
 cff-version: 1.2.0
-message: "Please cite this repository and identify the release tag or commit used. The repository account is the citation entity requested by its owner; original research attribution remains in the supplied materials."
+message: "Please cite this repository and the actual tag/commit used. This supplementary snapshot is aligned to the author-provided 9 November 2026, 17-page revised manuscript; it does not assign a journal publication DOI."
 title: "New-Supplementary-Materials"
 authors:
   - name: "hideok3460"
 url: "https://github.com/hideok3460/New-Supplementary-Materials"
 repository-code: "https://github.com/hideok3460/New-Supplementary-Materials"
-abstract: "Preserved run02 hardware records, completed analyses, supplementary derivations and tables, and a saved-record manuscript audit for Applied Sciences manuscript applsci-4605095. Offline verification does not submit new QPU jobs or repeat every numerical refit."
+abstract: "Saved run02 hardware evidence and manuscript audit for applsci-4605095: Ideal Fixed-Code Channel Equivalence and Single-Session Hardware Diagnostics of a Five-Qubit Coherent State-Transfer Circuit. One session; six job chunks. The 1746-circuit archive and numerical analyses are unchanged in this editorial alignment."
 keywords:
-  - quantum state transfer
+  - encoded qubit
+  - single-session hardware diagnostics
   - reproducibility
-  - process tomography
   - code-space leakage
-# Add date-released, version and DOI only after the corresponding event exists.
-# No DOI or release-publication date has been assigned by this packaging step.
+  - process tomography
+# Add date-released/version/DOI only after a real release or DOI exists.
+# Manuscript authors remain attributed in the supplied documents and archive.

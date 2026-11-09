@@ -1,0 +1,65 @@
+{
+  "template": {
+    "passes_from_clean_directory": 3,
+    "pages": 15,
+    "undefined_references_or_citations": false,
+    "overfull_boxes": false,
+    "text_placeholder_scan_passed": true,
+    "all_pages_rendered_and_visually_inspected": true
+  },
+  "Supplementary_Derivations": {
+    "passes_from_clean_directory": 2,
+    "pages": 2,
+    "undefined_references_or_citations": false,
+    "overfull_boxes": false,
+    "text_placeholder_scan_passed": true,
+    "all_pages_rendered_and_visually_inspected": true
+  },
+  "Supplementary_Run02_Tables": {
+    "passes_from_clean_directory": 2,
+    "pages": 11,
+    "undefined_references_or_citations": false,
+    "overfull_boxes": false,
+    "text_placeholder_scan_passed": true,
+    "all_pages_rendered_and_visually_inspected": true
+  },
+  "references": {
+    "bibliography_entries": 18,
+    "all_cited": true,
+    "first_appearance_order": true
+  },
+  "MDPI_Definitions_unchanged": true,
+  "four_circuit_PDF_internal_labels_resolved": true,
+  "Response_Reviewer_1": {
+    "pages": 4,
+    "docx_rendered_to_PDF": true,
+    "all_pages_visually_inspected": true
+  },
+  "Response_Reviewer_2": {
+    "pages": 5,
+    "docx_rendered_to_PDF": true,
+    "all_pages_visually_inspected": true
+  },
+  "Response_Reviewer_3": {
+    "pages": 4,
+    "docx_rendered_to_PDF": true,
+    "all_pages_visually_inspected": true
+  },
+  "hardware_archive_sha256": "d9a3ec3a5ef620e13216f9e4719508ea5148e4633ec26868e1f83cd1c382baab",
+  "hardware_archive_preserved_byte_for_byte": true,
+  "audit_script_portable_test_passed": true,
+  "environment": {
+    "python": "3.13.5 (main, Jul 15 2026, 20:25:40) [GCC 14.2.0]",
+    "platform": "Linux-6.18.55-x86_64-with-glibc2.41",
+    "latex": "pdfTeX / TeX Live 2025-dev (Debian)",
+    "docx_renderer": "LibreOffice through docx skill renderer"
+  },
+  "not_performed": [
+    "New QPU jobs",
+    "Remote IBM provenance authentication",
+    "Full re-optimization of all 500 bootstrap fits",
+    "Repeated-day or cross-backend study",
+    "Independent statistical coverage study",
+    "Copyright permission confirmation"
+  ]
+}
